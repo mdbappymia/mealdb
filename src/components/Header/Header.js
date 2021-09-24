@@ -14,7 +14,7 @@ const Header = (props) => {
     }
   };
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand href="#">MealDB Shop</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
