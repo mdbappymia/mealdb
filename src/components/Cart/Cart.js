@@ -19,12 +19,12 @@ const Cart = (props) => {
   }
   return (
     <div>
-      <h1>Selected: {props.cart.length}</h1>
+      <h4>Selected: {props.cart.length}</h4>
       <br />
-      <h3>Price: ${total}</h3>
-      <p>Delivery Cost: ${delivery}</p>
-      <p>Tax: ${tax.toFixed(2)}</p>
-      <h2>Total: ${grandTotal.toFixed(2)}</h2>
+      <h5>Price: ${total}</h5>
+      <p className="mb-0">Delivery Cost: ${delivery}</p>
+      <small>Tax: ${tax.toFixed(2)}</small>
+      <h4>Total: ${grandTotal.toFixed(2)}</h4>
       <hr />
     </div>
   );

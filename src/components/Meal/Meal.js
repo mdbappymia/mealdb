@@ -8,7 +8,12 @@ const Meal = (props) => {
   const { strMealThumb, strIngredient1, strInstructions } = props.meal;
   const price = 17;
   return (
-    <Card style={{ width: "16rem", margin: "10px" }}>
+    <Card
+      style={{ width: "16rem", margin: "10px" }}
+      onClick={() => props.handleDetails(props.meal)}
+      className="single-meal"
+      title="Click for Details"
+    >
       <Card.Img variant="top" src={strMealThumb} />
       <Card.Body>
         <Card.Title>{strIngredient1}</Card.Title>
