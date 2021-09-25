@@ -1,3 +1,7 @@
 .meal-container {
   border-right: 1px solid lightgray;
 }
+.cart-container {
+  position: fixed;
+  right: 10%;
+}

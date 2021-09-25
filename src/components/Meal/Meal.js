@@ -4,9 +4,9 @@ import { Card } from "react-bootstrap";
 import "./Meal.css";
 
 const Meal = (props) => {
-  console.log(props.meal);
+  // console.log(props.meal);
   const { strMealThumb, strIngredient1, strInstructions } = props.meal;
-  const price = Math.random() * 20;
+  const price = 17;
   return (
     <Card style={{ width: "16rem", margin: "10px" }}>
       <Card.Img variant="top" src={strMealThumb} />
@@ -16,8 +16,13 @@ const Meal = (props) => {
           {strInstructions.slice(0, 120)}
         </Card.Text>
         <div className="d-flex justify-content-between">
-          <h3>$ {Math.round(price)}</h3>
-          <Button className="btn btn-primary">Add to Cart</Button>
+          <h4>$ {price}</h4>
+          <Button
+            onClick={() => props.handleCart(props.meal, price)}
+            className="btn btn-primary"
+          >
+            Add to Cart
+          </Button>
         </div>
       </Card.Body>
     </Card>
